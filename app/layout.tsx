@@ -38,13 +38,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en' className={`${cabinetGrotesk.variable} ${cormorant.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
           <div className="container-main h-full">
-            <div className="grid grid-cols-5 h-full opacity-30 border-x border-border">
+            <div className="grid grid-cols-4 h-full opacity-30 border-x border-border">
               <div className="border-r border-border h-full"></div>
               <div className="border-r border-border h-full"></div>
               <div className="border-r border-border h-full"></div>
-              <div className="border-r border-border h-full"></div>
+              {/* <div className="border-r border-border h-full"></ */}
               <div className="h-full"></div>
             </div>
           </div>

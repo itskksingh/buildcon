@@ -74,7 +74,7 @@ export function Hero() {
   };
 
   return (
-    <section className='relative w-full min-h-screen overflow-hidden'>
+    <section className='relative w-full min-h-screen overflow-hidden bg-smoke2'>
       <div className='container-main h-full min-h-dvh'>
         <div className='relative w-full h-full min-h-screen'>
           {/* Slide counter — top left */}
