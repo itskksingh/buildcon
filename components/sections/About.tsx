@@ -80,20 +80,25 @@ export function About() {
   ];
 
   return (
-    <section id='about' className='relative w-full overflow-hidden section-space'>
+    <section id='about' className='relative z-10 w-full overflow-hidden section-space'>
       {/* Top Animated Scale Image */}
-      <div className='absolute top-0 left-0 w-full h-6 sm:h-10 z-10 pointer-events-none opacity-90 mix-blend-multiply overflow-hidden'>
+      <div className='absolute top-0 left-0 w-full h-12 sm:h-16 z-10 pointer-events-none opacity-100 mix-blend-plus-darker overflow-hidden'>
         <div
-          className='flex w-[200%] sm:w-[300%] h-full animate-marquee'
+          className='flex w-[150%] sm:w-[200%] h-full animate-marquee'
           style={{ animationDirection: "reverse", animationDuration: "70s" }}>
-          <div className="w-full h-full bg-[url('/img/about/scale.png')] bg-repeat-x bg-contain bg-left"></div>
-          <div className="w-full h-full bg-[url('/img/about/scale.png')] bg-repeat-x bg-contain bg-left"></div>
+          <div className="w-full h-full bg-[url('/img/about/scale.png')] bg-repeat-x bg-size-[auto_100%] bg-top-left"></div>
+          <div className="w-full h-full bg-[url('/img/about/scale.png')] bg-repeat-x bg-size-[auto_100%] bg-top-left"></div>
         </div>
       </div>
 
       {/* Background sketch image on right side */}
       <div className='absolute top-0 left-0 w-full lg:w-[50%] h-full pointer-events-none z-0'>
-        <Image src='/img/about/bg-shape.png' alt='Background Shape' fill className='object-contain object-left opacity-60' />
+        <Image
+          src='/img/about/bg-shape.png'
+          alt='Background Shape'
+          fill
+          className='object-contain object-left opacity-60'
+        />
       </div>
 
       <div className='container-main relative z-10'>
@@ -130,7 +135,7 @@ export function About() {
             </div>
 
             {/* Image 2 (Right Overlapping Image) - ~55% width */}
-            <div className='absolute top-0 right-0 lg:right-10 w-[55%] h-[320px] sm:h-[420px] lg:h-[480px] bg-smoke z-10 shadow-xl'>
+            <div className='absolute top-0 right-0 lg:right-10 w-[55%] h-[320px] sm:h-[420px] lg:h-[480px] bg-smoke z-10 border-12 shadow-2xl border-white'>
               <Image
                 src='/img/about/interior.png'
                 alt='Modern Interior'
@@ -140,8 +145,8 @@ export function About() {
               />
 
               {/* Floating Experience Box */}
-              <div className='absolute -bottom-16 sm:-bottom-10 right-0 sm:right-auto sm:-left-12 lg:-left-20 bg-black2 p-6 sm:p-8 py-8 sm:py-10 text-white w-[260px] sm:w-[300px] shadow-2xl z-20'>
-                <h4 className='title-display font-title font-bold mb-1 leading-none text-white !text-4xl sm:!text-5xl'>
+              <div className='absolute -bottom-12 sm:-bottom-30 right-0 sm:right-auto sm:-left-12 lg:left-10 bg-black2 p-6 sm:p-8 py-8 sm:py-10 text-white w-[260px] sm:w-[300px] shadow-2xl z-20'>
+                <h4 className='title-display font-title font-bold mb-1 leading-none text-white text-4xl! sm:text-5xl!'>
                   25<span className='text-white'>+</span>
                 </h4>
                 <p className='text-[11px] font-title tracking-[0.2em] uppercase mb-8 text-white/70'>Years Experience</p>
@@ -211,7 +216,7 @@ export function About() {
                   <Image src='/img/about/founder.png' alt='Michel Smith' fill className='object-cover' />
                 </div>
                 <div>
-                  <p className='font-title2 text-2xl text-text leading-none mb-1'>Michel Smith</p>
+                  <p className='font-title2 text-2xl text-text leading-none mb-1'>Mr. Ramesh Verma</p>
                   <p className='text-[10px] sm:text-[11px] font-title tracking-widest uppercase text-body'>
                     Founder of the company
                   </p>

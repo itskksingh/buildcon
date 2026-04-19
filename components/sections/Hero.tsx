@@ -17,29 +17,29 @@ const slides = [
     headline: ["Innovative", "Architect", "Designs, Shaping the", "Future of Spaces"],
     highlight: "Architect",
     image: "/img/hero/hero_slide_1.png",
-    badge: <GoogleReviewBadge />
+    badge: <GoogleReviewBadge />,
   },
   {
     id: 2,
     headline: ["Visionary Architect Crafting", "Architect", "Tomorrow's Spaces"],
     highlight: "Architect",
     image: "/img/hero/hero_slide_2.png",
-    badge: <PhoneBadge number="+1 (555) 123-4567" />
+    badge: <PhoneBadge number='+1 (555) 123-4567' />,
   },
   {
     id: 3,
     headline: ["Where", "Creativity", "Meets Future-Ready Architecture"],
     highlight: "Creativity",
     image: "/img/hero/hero_slide_3.png",
-    badge: <InstagramBadge handle="@buildcon.arch" />
+    badge: <InstagramBadge handle='@buildcon.arch' />,
   },
-  {
-    id: 4,
-    headline: ["This", " webpage is", "created by", "K K Singh", "know more", "@kksingh.dev"],
-    highlight: "K K Singh",
-    image: "/img/hero/my profile.png",
-    badge: <AddressBadge address="123 Architect Blvd, Miami FL" />
-  },
+  // {
+  //   id: 4,
+  //   headline: ["This", " webpage is", "created by", "K K Singh", "know more", "@kksingh.dev"],
+  //   highlight: "K K Singh",
+  //   image: "/img/hero/my profile.png",
+  //   badge: <AddressBadge address='123 Architect Blvd, Miami FL' />,
+  // },
 ];
 
 const slideInLeft = {
@@ -78,7 +78,7 @@ export function Hero() {
       <div className='container-main h-full min-h-dvh'>
         <div className='relative w-full h-full min-h-screen'>
           {/* Slide counter — top left */}
-          <div className='absolute top-24 mb-10 sm:top-28 lg:top-36 left-0 z-20 flex items-center gap-3'>
+          <div className='absolute top-24 sm:top-28 lg:top-36 left-0 z-20 flex items-center gap-3'>
             <span className='text-sm font-body text-text font-medium tracking-wider'>0{activeIndex + 1}</span>
             <span className='w-8 h-px bg-main' />
             <span className='text-sm font-body text-main font-medium tracking-wider'>0{slides.length}</span>
@@ -119,13 +119,12 @@ export function Hero() {
             className='w-full min-h-screen'>
             {slides.map((slide, index) => (
               <SwiperSlide key={slide.id}>
-                <div className='relative w-full h-full min-h-dvh flex flex-col justify-center'>
-
+                <div className='relative w-full h-full min-h-dvh flex flex-col justify-end'>
                   {/* Left content */}
-                  <div className='relative z-10 w-full lg:w-[55%] flex items-center justify-center pt-20 lg:pt-0'>
+                  <div className='relative z-10 w-full lg:w-[55%] flex flex-col justify-end pt-32 pb-6 sm:pb-10 lg:pb-24'>
                     <AnimatePresence mode='wait'>
                       {activeIndex === index && (
-                        <motion.div key={`content-${key}`} className="w-full">
+                        <motion.div key={`content-${key}`} className='w-full'>
                           {/* Headline */}
                           <motion.h1
                             className='title-display font-title font-semibold leading-[1.05] text-text mb-6 lg:mb-8'
@@ -157,15 +156,15 @@ export function Hero() {
                               href='#about'
                               className='group relative overflow-hidden font-body text-sm font-medium px-7 py-3.5 rounded-full bg-main text-white transition-transform duration-300 hover:scale-105 shadow-lg shadow-orange-200'>
                               {/* Dark sweep drawing effect */}
-                              <span className="absolute inset-0 -translate-x-full bg-black/15 transition-transform duration-500 ease-out group-hover:translate-x-0" />
-                              <span className="relative z-10">Know More Us</span>
+                              <span className='absolute inset-0 -translate-x-full bg-black/15 transition-transform duration-500 ease-out group-hover:translate-x-0' />
+                              <span className='relative z-10'>Know More Us</span>
                             </a>
                             <a
                               href='#projects'
                               className='group relative overflow-hidden font-body text-sm font-medium px-7 py-3.5 rounded-full border border-text text-text transition-colors duration-300 hover:text-white hover:border-text'>
                               {/* Dark sweep drawing effect */}
-                              <span className="absolute inset-0 translate-y-full bg-text transition-transform duration-500 ease-out group-hover:translate-y-0" />
-                              <span className="relative z-10">Explore Projects</span>
+                              <span className='absolute inset-0 translate-y-full bg-text transition-transform duration-500 ease-out group-hover:translate-y-0' />
+                              <span className='relative z-10'>Explore Projects</span>
                             </a>
                           </motion.div>
 
@@ -185,7 +184,7 @@ export function Hero() {
                   </div>
 
                   {/* Right: full bleed image */}
-                  <div className='relative lg:absolute right-0 top-0 w-full lg:w-[52%] h-[40vh] sm:h-[50vh] lg:h-full mt-8 lg:mt-0'>
+                  <div className='relative z-60 lg:absolute right-0 bottom-10 w-full lg:w-[52%] h-[40vh] sm:h-[50vh] lg:h-full mt-8 lg:mt-0'>
                     <AnimatePresence mode='wait'>
                       {activeIndex === index && (
                         <motion.div
@@ -201,7 +200,7 @@ export function Hero() {
                             fill
                             priority={index === 0}
                             sizes='(max-width: 1024px) 100vw, 52vw'
-                            className='object-contain object-center'
+                            className='object-fill object-bottom'
                           />
 
                           {/* Play button overlay */}

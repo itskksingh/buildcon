@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning>
         <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
           <div className="container-main h-full">
-            <div className="grid grid-cols-4 h-full opacity-30 border-x border-border">
+            <div className="grid grid-cols-4 h-full opacity-20 border-x border-border">
               <div className="border-r border-border h-full"></div>
               <div className="border-r border-border h-full"></div>
               <div className="border-r border-border h-full"></div>
